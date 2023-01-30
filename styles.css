@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@400;500&display=swap');
+
+
+:root{
+    --backgroung-gris: #303134;
+    --black-gradiant: #050B13;
+    --mid-gradiant:#4D4D4D;
+    --end-gradiant:#333040;
+    }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+
+body{
+    overflow-x: hidden; 
+}
+
+
+/********************/
+/*** SECTION NAV ***/
+/********************/
+
+nav{
+    width: 100vw;
+    height: 45px;
+    background-color: var(--backgroung-gris);
+    position: fixed;
+    display: flex;
+    overflow-y: visible;
+    border-bottom: red solid 1px;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}
+
+.menu li{
+    margin: 0 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu li::after{
+    content:'';
+    width:1px;
+    height:4px;
+    z-index:1;
+    position:absolute;
+    background:whitesmoke;
+    display: none;
+    transition: all 1s ease;
+}
+
+.menu li:hover::after{
+    display: block;
+    width: 100%;
+}
+
+
+
+
+/********************/
+/*** SECTION HOME ***/
+/********************/
+
+#home{
+    height: 100vh;
+    background-color: var(--black-gradiant);
+
+
+}
+
+#home .container-cover{
+    display: flex;
+    padding: 68vh 80px 0;
+    border: solid yellow 1px;
+    height: 100vh;
+    animation: zoom-out 1.6s 0.35s forwards;
+}
+
+#home .logo{
+    background: url(img/White\ logo.png);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 20vh;
+    width: 21vw;
+    min-width: 250px;
+    border: solid red 1px;
+}
+
+#home .container-text{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 80px;
+    border: solid orange 1px;
+    animation: showTopText;
+
+}
+
+#home .discoverUs{
+    border: solid 1px whitesmoke;
+    text-align: center;
+    align-self: center;
+    padding: 0.8em;
+    width: 22%;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 20px;
+    animation: showBottomText ;
+}
+
+h1{
+    font-family: 'Koulen', cursive;
+    color: whitesmoke;
+    font-size: 2.5em;
+    line-height: 1.25em;
+    animation: showTopText ;
+
+}
+
+
+/**** ANIMATIONS *****/
+@keyframes zoom-out{
+    0% {background: url(img/MSM\ Aviation\ -\ Helicopters\ -\ cover\ picture.jpg);
+        transform: scale(1.2, 1.2);
+        opacity: 0.5;
+        background-position: center;
+        background-size: cover;
+
+    }
+    100% {
+        background: url(img/MSM\ Aviation\ -\ Helicopters\ -\ cover\ picture.jpg);
+        transform: scale(1, 1);
+        opacity:1;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+
+@keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+
+
