@@ -29,7 +29,7 @@ body{
 
 nav{
     width: 100vw;
-    height: 45px;
+    height: 48px;
     background-color: var(--backgroung-gris);
     position: fixed;
     display: flex;
@@ -40,6 +40,10 @@ nav{
     justify-content: flex-end;
     padding-right: 15px;
 
+}
+
+nav a{
+    text-decoration: none;
 }
 
 .menu{
@@ -57,17 +61,16 @@ nav{
 
 .menu li::after{
     content:'';
-    width:1px;
-    height:4px;
+    display: block;
+    width:0px;
+    height:3px;
     z-index:1;
     position:absolute;
     background:whitesmoke;
-    display: none;
-    transition: all 1s ease;
+    transition: width 0.4s ease-in-out;
 }
 
 .menu li:hover::after{
-    display: block;
     width: 100%;
 }
 
@@ -87,11 +90,19 @@ nav{
 
 #home .container-cover{
     display: flex;
-    padding: 68vh 80px 0;
+    padding: 68vh 5vw 0 10vw;
     border: solid yellow 1px;
     height: 100vh;
-    animation: zoom-out 1.6s 0.35s forwards;
+    animation: zoom-out 3s ease-in-out 1s forwards;
 }
+
+#home .nonMovingDiv{
+    border: pink 1px solid;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
 
 #home .logo{
     background: url(img/White\ logo.png);
@@ -102,14 +113,33 @@ nav{
     width: 21vw;
     min-width: 250px;
     border: solid red 1px;
+    overflow: hidden;
+    opacity: 0;
+    animation: showLogo 0.8s ease-in-out 1.9s forwards;
 }
 
 #home .container-text{
     display: flex;
     flex-direction: column;
-    padding: 20px 80px;
+    padding: 20px 75px;
     border: solid orange 1px;
-    animation: showTopText;
+
+}
+
+.topText{
+    overflow: hidden;
+    border: greenyellow solid 1px;
+}
+
+
+
+h1{
+    font-family: 'Koulen', cursive;
+    color: whitesmoke;
+    font-size: 2.7em;
+    line-height: 1.25em;
+    opacity:0;
+    animation: showTopText 0.4s ease-in-out 2.3s forwards;
 
 }
 
@@ -121,18 +151,48 @@ nav{
     width: 22%;
     font-size: 1.2em;
     font-weight: 600;
-    margin-top: 20px;
-    animation: showBottomText ;
+    margin-top: 25px;
+    opacity: 0;
+    z-index: -1;
+    animation: appear 1.5s linear 3.5s forwards;
 }
 
-h1{
-    font-family: 'Koulen', cursive;
-    color: whitesmoke;
-    font-size: 2.5em;
-    line-height: 1.25em;
-    animation: showTopText ;
+.discoverUs a{
+    text-decoration: none;
+}
+
+.discoverUs:hover{
+    background-color: whitesmoke;
+    transform: scale(1.1,1.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.discoverUs:hover a{
+    color: #303134;
 
 }
+
+/********************/
+/*** SECTION FOOTER ***/
+/********************/
+
+#footer{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 40px;
+    background-color: var(--black-gradiant);
+    font-size: 0.85em;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer p,span{
+    color: rgb(192, 192, 192);
+}
+
+
 
 
 /**** ANIMATIONS *****/
@@ -154,14 +214,16 @@ h1{
 }
 
 @keyframes showTopText {
-    0% { transform: translate3d(0, 100%, 0); }
-    40%, 60% { transform: translate3d(0, 50%, 0); }
-    100% { transform: translate3d(0, 0, 0); }
+    0% { transform: translate3d(0, 100%, 0); opacity: 1; }
+    100% { transform: translate3d(0, 0, 0); opacity:1; }
   }
 
-@keyframes showBottomText {
-    0% { transform: translate3d(0, -100%, 0); }
-    100% { transform: translate3d(0, 0, 0); }
+@keyframes showLogo {
+    0% { transform: translate3d(0, -100%, 0); opacity:1}
+    100% { transform: translate3d(0, 0, 0); opacity:1}
   }
 
-
+@keyframes appear {
+    0% { z-index:0; opacity:0; }
+    100% { z-index:1; opacity:1; }
+}

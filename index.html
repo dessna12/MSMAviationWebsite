@@ -13,8 +13,8 @@
 <!--MENU DEROULANT-->
 <nav>
     <ul class="menu">
-        <li a="#">HOME</li>
-        <li a="#">WHO WE ARE</li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="/whoWeAre.html">WHO WE ARE</a></li>
         <li a="#">OUR CAPABABILITIES</li>
         <li a="#">CONTACT</li>
     </ul>
@@ -26,11 +26,15 @@
     <div id="image_cover">
 
         <div class="container-cover">
-            <div class="logo"></div>
+            <div class="nonMovingDiv">
+                <div class="logo"></div>
+            </div>
             <div class="container-text">
-                <h1>Excellence in the skies: <br>
-                    delivering helicopters parts at a fair price</h1>
-                <p class="discoverUs">DISCOVER US</p>
+                <div class="topText">
+                    <h1>Excellence in the skies: <br>
+                        delivering helicopters parts at a fair price</h1>
+                </div>
+                <p class="discoverUs"><a href="/whoWeAre.html">DISCOVER US</a></p>
             </div>
         </div>
 
@@ -38,16 +42,24 @@
 
     </div>
 
-
-
-
-
-
 </section>
 
 
 
 <!-- SECTION -->
+
+<!-- <?php 
+include('footer.php');
+?> -->
+
+
+<!-- FOOTER -->
+<section>
+    <div id="footer">
+        <p>MSM AVIATION, 1 impasse du Cluzel, 69200 Venissieux FRANCE |  <span><a href="#">Disclaimer</a></span>  | <span><a href="#">General Terms of sale</a></span>  | All rights reserved ©2023 MSM Aviation 
+        </p>
+    </div>
+</section>
 
 </body>
 </html>
