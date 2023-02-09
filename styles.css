@@ -6,7 +6,7 @@
     --black-gradiant: #050B13;
     --mid-gradiant:#4D4D4D;
     --end-gradiant:#333040;
-    --heightNav:48px;
+    --heightNav:60px;
     }
 
 
@@ -61,6 +61,10 @@ nav a{
     position: relative;
 }
 
+.menu li a{
+    font-size: 1.2em;
+}
+
 .menu li::after{
     content:'';
     display: block;
@@ -69,7 +73,8 @@ nav a{
     z-index:1;
     position:absolute;
     background:whitesmoke;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.25s ease-in-out;
+    margin-top: 2px;
 }
 
 .menu li:hover::after{
@@ -139,7 +144,8 @@ nav a{
 h1{
     font-family: 'Koulen', cursive;
     color: whitesmoke;
-    font-size: 2.7em;
+    font-size: 2.8em;
+    font-weight: 500;
     line-height: 1.25em;
     opacity:0;
     animation: showTopText 0.4s ease-in-out 2.1s forwards;
@@ -147,14 +153,15 @@ h1{
 }
 
 #home .discoverUs{
-    border: solid 1px whitesmoke;
+    /* border: solid 1px whitesmoke; */
     text-align: center;
     align-self: center;
     padding: 0.8em;
     width: 22%;
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 25px;
+    visibility: hidden;
     opacity: 0;
     z-index: -1;
     animation: appear 1.1s linear 3s forwards;
@@ -164,17 +171,59 @@ h1{
     text-decoration: none;
 }
 
-.discoverUs:hover{
+/* .discoverUs:hover a{
+    color: #303134;
+} */
+
+
+.discoverUs {
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: whitesmoke;
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+  } 
+
+  
+ .discoverUs:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+  }
+
+
+/**** Animation simpliste ***/
+/* .discoverUs:hover{
     background-color: whitesmoke;
     transform: scale(1.1,1.1);
     border-radius: 5px;
     cursor: pointer;
+} */
+
+
+
+/**** Animation shadow box ***/
+/* .discoverUs{
+    box-shadow: 
+        0.3em 0.3em 0 0 whitesmoke,
+        inset 0.3em 0.3em 0 0 whitesmoke;
+    transition: 0.25s;
 }
 
-.discoverUs:hover a{
-    color: #303134;
+.discoverUs:hover{
+    box-shadow: 
+        0 0 0 0 whitesmoke,
+        inset 6em 3.5em 0 0 whitesmoke;
+    cursor: pointer;
+} */
 
-}
+
+
+
 
 
 /**************************/
@@ -225,7 +274,6 @@ h1{
     position: relative;
     top:0;
     left:0;
-    margin: 15px;
 }
 
 
@@ -334,11 +382,13 @@ h1{
     height: 100vh;
     width: 100%;
     background: url(img/img3.png);
-    background-position: center;
+    background-position: 50% 78%;
     background-size:60%;
     background-repeat: no-repeat;
     border: yellow 1px solid;
     position: absolute;
+    opacity: 0;
+    animation: zoomOutFade 0.5s ease-in-out forwards;
 }
 
 
@@ -367,8 +417,9 @@ h1{
     border: pink 1px solid;
     display: flex;
     flex-direction: row;
-    width: 32%;
-    padding: 0 20px;
+    width: 30%;
+    padding-left: 30px;
+    padding-right: 20px;
 }
 
 #ourCapabilities .chiffre{
@@ -380,6 +431,7 @@ h1{
 #ourCapabilities h3{
     padding: 1.5em 0 0.7em 0;
     font-size: 1.5em;
+    font-weight: 500;
 }
 
 
@@ -391,9 +443,40 @@ h1{
     content: '✓ ';
   }
 
+
+
+.s1{
+    padding-top: 50px;
+    animation: zoomOutFade 1s ease-in-out 0.4s forwards;
+    opacity:0;
+}
+
+.s2{
+    animation: zoomOutFade 1s ease-in-out 0.6s forwards;
+    opacity: 0;
+}
+
+.s3{
+    padding-top: 50px;
+    animation: zoomOutFade 1s ease-in-out 0.8s forwards;
+    opacity: 0;
+}
+
+.s4{
+    animation: zoomOutFade 1s ease-in-out 1s forwards;
+    opacity: 0;
+}
+
+.s5{
+    animation: zoomOutFade 1s ease-in-out 1.2s forwards;
+    opacity: 0; 
+}
+
+
 .serv1{
     color: #DDE8E4;
 }
+
 
 .serv2{
     color: #A9B5B6 ;
@@ -411,13 +494,41 @@ h1{
     color: #909FAA;
 }
 
+.text p{
+    padding-right: 20%;
+}
+
+
+
 /************************/
 /*** SECTION CONTACT ***/
 /***********************/
 
+#contact{
+    height: 100vh;
+    background: rgb(5,11,19);
+    background: linear-gradient(45deg, rgba(5,11,19,1) 0%, rgba(77,77,77,1) 49%, rgba(51,48,64,1) 100%);
+}
+
+#contact .container1{
+    width: 100vw;
+    height: 100vh;
+    border: greenyellow 1px solid;
+    position: relative;
+    margin-left: 1vw;
+}
 
 
-
+#banner{
+    border: #2F528F solid 1px;
+    width: 100vw;
+    height: 30vh;
+    background-image: url(/img/img4.jpeg);
+    background-size: cover;
+    background-position: 0% 15%;
+    padding-top: var(--heightNav);
+    opacity: 0.7;
+}
 
 
 /********************/
@@ -471,6 +582,18 @@ h1{
   }
 
 @keyframes appear {
-    0% { z-index:0; opacity:0; }
-    100% { z-index:1; opacity:1; }
+    0% { visibility: visible; z-index:1; opacity:0; }
+    100% {visibility: visible;  z-index:1; opacity:1; }
+}
+
+@keyframes zoomOutFade{
+    0%{
+        opacity:0;
+        transform: scale(2,2);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1,1);
+    }
+
 }
