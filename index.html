@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable="no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/White logo.png">
     <title>MSM Aviation</title>
@@ -12,12 +13,16 @@
 
 <!--MENU DEROULANT-->
 <nav>
-    <ul class="menu">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="/whoWeAre.html">WHO WE ARE</a></li>
-        <li><a href="/ourCapabilities.html">OUR CAPABABILITIES</a></li>
-        <li><a href="/contact.html">CONTACT</a></li>
-    </ul>
+    <div id="burger-menu">
+        <label for="mobile"><span class="material-symbols-outlined burger">menu</span></label>
+        <input type="checkbox" id="mobile" role="button">
+        <ul class="menu">
+            <li><a href="/index.html" class="element-menu">HOME</a></li>
+            <li><a href="/whoWeAre.html" class="element-menu">WHO WE ARE</a></li>
+            <li><a href="/ourCapabilities.html" class="element-menu">OUR CAPABABILITIES</a></li>
+            <li><a href="/contact.html" class="element-menu">CONTACT</a></li>
+        </ul>
+    </div>
 </nav>
 
 
@@ -26,8 +31,9 @@
     <div id="image_cover">
 
         <div class="container-cover">
-            <div class="nonMovingDiv">
-                <div class="logo"></div>
+            <div class="logo-mobile desktop-hide"></div>
+            <div class="nonMovingDiv mobile-hide">
+                <div class="logo mobile-hide"></div>
             </div>
             <div class="container-text">
                 <div class="topText">
@@ -35,6 +41,7 @@
                         delivering helicopter parts at a fair price</h1>
                 </div>
                 <a href="/whoWeAre.html" class="discoverUs"><div>DISCOVER US</div></a>
+                <div class="desktop-hide expand"><span class="material-symbols-outlined">expand_more</span></div>
             </div>
         </div>
 
@@ -63,6 +70,12 @@ include('footer.php');
 
     </div>
 </footer>
+
+
+<!-- SCRIPT -->
+<script src="animations.js"></script>
+
+
 
 </body>
 </html>
