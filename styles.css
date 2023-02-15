@@ -764,6 +764,14 @@ h1{
 }
 
 
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -9px, 0);
+    }
+}
 
 
 /* ***************************************************************** */
@@ -890,12 +898,20 @@ h1{
 
 #home .container-cover{
     padding-top: 45px;
-    animation: zoom-out-mobile 1.9s ease-in-out 1s forwards;
+    animation: zoom-out-mobile 1.7s ease-in-out 1s forwards;
     flex-direction: column;
     justify-content: space-between;
     border: 1px red solid;
 
 }
+
+#home .nonMovingDiv-mobile{
+    border: solid purple 1px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
 
 #home .logo-mobile{
     background: url(img/logo_msm_darkgrey.png);
@@ -906,6 +922,9 @@ h1{
     width: 100%;
     height: 15vh;
     min-height: 90px;
+    overflow: hidden;
+    opacity: 0;
+    animation: showLogo 0.3s ease-in-out 1.8s forwards;
 }
 
 
@@ -965,10 +984,56 @@ h1{
 
 .expand span{
     font-size: 3em;
+    animation: bounce 0.4s ease-in-out 3.6s alternate;
+    animation-iteration-count: 6;
 }
 
 
+ /********************/
+/*** SECTION HOME ***/
+/********************/   
+
+#whoWeAre-mobile{
+    height: fit-content;
+    background: rgb(5,11,19);
+    background: linear-gradient(45deg, rgba(5,11,19,1) 0%, rgba(77,77,77,1) 49%, rgba(51,48,64,1) 100%);
+    text-align: center;
+    padding: 10px 40px;
+}
 
 
+#whoWeAre-mobile h2{
+    padding: 1em;
+    font-size: 1.7em;
+    font-weight: 500;
+}
+
+#whoWeAre-mobile .text-intro{
+    padding: 10px 20px;
+    font-weight: 500;
+
+}
+
+#whoWeAre-mobile h3{
+    padding: 1em 0;
+    font-weight: 500;
+}
+
+#whoWeAre-mobile i{
+    border:#427388 solid 2px;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 1.8em;
+}
+
+#whoWeAre-mobile .helicopterMaquette-mobile{
+    background: url(img/img3.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: palevioletred 1px solid;
+    width: 100%;
+    height: 50vw
+}
 
 }
