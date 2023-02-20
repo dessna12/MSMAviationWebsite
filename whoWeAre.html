@@ -8,20 +8,27 @@
     <link rel="icon" href="img/White logo.png">
     <title>MSM Aviation</title>
 </head>
-<body>
+<body data-barba="wrapper">
 
 
+<!--MENU DEROULANT-->
+<nav>
+    <ul class="menu">
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/whoWeAre.html">WHO WE ARE</a></li>
+        <li><a href="/ourCapabilities.html">OUR CAPABABILITIES</a></li>
+        <li><a href="/contact.html">CONTACT</a></li>
+    </ul>
+</nav>
+
+<!-- LOAD CONTAINER-->
+<div class="load-container">
+    <div class="loading-screen"></div>
+</div>
+
+<!--MENU DEROULANT-->
+<main data-barba="container" data-barba-namespace="whoWeAre-section">
 <section id="whoWeAre">
-
-    <nav>
-        <ul class="menu">
-            <li><a href="/index.html">HOME</a></li>
-            <li><a href="/whoWeAre.html">WHO WE ARE</a></li>
-            <li><a href="/ourCapabilities.html">OUR CAPABABILITIES</a></li>
-            <li><a href="/contact.html">CONTACT</a></li>
-        </ul>
-    </nav>
-
     <div id="sideimg">
 
         <div class="container1">
@@ -74,15 +81,17 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
 </section>
 
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<script src="animations.js"></script>
 
 </body>
 </html>

@@ -27,15 +27,46 @@
     color: whitesmoke;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     overflow-x: hidden; 
-    scroll-behavior: smooth;
 }
 
 
 .desktop-hide{
     display: none;
 }
+
+/************************************/
+/******** LOAD CONTAINER ***********/
+/**********************************/
+
+
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: var(--backgroung-gris);
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
 
 /********************/
 /*** SECTION NAV ***/
@@ -787,6 +818,25 @@ h1{
     display: inherit;
 }
 
+
+
+/********************/
+/*** ALL SECTIONS ***/
+/********************/
+
+.desktop-hide h2{
+    padding: 0.7em 0;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.border-bottom{
+    border-bottom: whitesmoke 1px solid;
+    margin-bottom: 1em;
+    overflow-y: hidden;
+}
+
+
 /********************/
 /*** SECTION NAV ***/
 /********************/
@@ -921,7 +971,7 @@ h1{
     margin: 20px 0 ;
     width: 100%;
     height: 15vh;
-    min-height: 90px;
+    min-height: 80px;
     overflow: hidden;
     opacity: 0;
     animation: showLogo 0.3s ease-in-out 1.8s forwards;
@@ -939,7 +989,7 @@ h1{
 .topText{
     overflow: hidden;
     border: greenyellow solid 1px;
-    padding: 0 40px;
+    padding: 0 0px;
 }
 
 
@@ -947,7 +997,7 @@ h1{
 h1{
     font-family: 'Koulen', cursive;
     color: whitesmoke;
-    font-size: 1.45em;
+    font-size: 1.3em;
     font-weight: 500;
     line-height: 1.25em;
     text-align: center;
@@ -962,7 +1012,7 @@ h1{
     align-self: center;
     padding: 0.6em;
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 500;
     margin-top: 20px;
     visibility: hidden;
@@ -984,29 +1034,33 @@ h1{
 
 .expand span{
     font-size: 3em;
-    animation: bounce 0.4s ease-in-out 3.6s alternate;
-    animation-iteration-count: 6;
+    animation: bounce 0.4s ease-in-out 4s alternate;
+    animation-iteration-count: 8;
 }
 
 
- /********************/
-/*** SECTION HOME ***/
-/********************/   
+ /**************************/
+/*** SECTION WHO WE ARE ***/
+/**************************/   
+
+.repère{
+    width: 100%;
+    height: 1px;
+    position: relative;
+    top: -50px;
+}
 
 #whoWeAre-mobile{
     height: fit-content;
     background: rgb(5,11,19);
     background: linear-gradient(45deg, rgba(5,11,19,1) 0%, rgba(77,77,77,1) 49%, rgba(51,48,64,1) 100%);
     text-align: center;
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 
 
-#whoWeAre-mobile h2{
-    padding: 1em;
-    font-size: 1.7em;
-    font-weight: 500;
-}
+
+
 
 #whoWeAre-mobile .text-intro{
     padding: 10px 20px;
@@ -1017,6 +1071,7 @@ h1{
 #whoWeAre-mobile h3{
     padding: 1em 0;
     font-weight: 500;
+    font-size: 1.3em;;
 }
 
 #whoWeAre-mobile i{
@@ -1024,6 +1079,31 @@ h1{
     border-radius: 50%;
     padding: 20px;
     font-size: 1.8em;
+    margin-top: 15px;
+}
+
+#whoWeAre-mobile h4{
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+
+#whoWeAre-mobile ul{
+    line-height: 1.5em;
+    border: #4185B5 solid 1px;
+}
+
+#whoWeAre-mobile li{
+    list-style-position: inside;
+    list-style: none;
+    padding-bottom: 1em;
+}
+
+#whoWeAre-mobile li:before{
+    content: '⮚ ';
+    font-size: 1em;
 }
 
 #whoWeAre-mobile .helicopterMaquette-mobile{
@@ -1033,7 +1113,133 @@ h1{
     background-repeat: no-repeat;
     border: palevioletred 1px solid;
     width: 100%;
-    height: 50vw
+    height: 50vw;
+    margin: 30px 0 ;
 }
+
+
+
+
+ /************************/
+/*** OUR CAPABILITIES ***/
+/************************/
+
+#capabilities-mobile{
+    height: fit-content;
+    background: rgb(5,11,19);
+    background: linear-gradient(45deg, rgba(5,11,19,1) 0%, rgba(77,77,77,1) 49%, rgba(51,48,64,1) 100%);
+    text-align: center;
+    padding: 10px 40px;
+}
+
+#capabilities-mobile .capability{
+    display: flex;
+    flex-direction: row;
+    padding: 1em 0 0.5em 0;
+    align-items: center;
+    margin-top: 2.5em;
+}
+
+#capabilities-mobile .number{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#capabilities-mobile .title-capability{
+    font-size: 1.1em;
+    font-weight: 500;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-left: 0.8em;
+
+}
+
+
+#capabilities-mobile ul{
+    text-align: left;
+}
+
+
+#capabilities-mobile li{
+    list-style: none;
+}
+
+#capabilities-mobile li:before{
+    content: '✓';
+    padding-right: 1em;
+    font-weight: 600;
+}
+
+
+
+
+.section-parallax {
+    background: url(/img/img2-S3.jpg) no-repeat fixed center;
+    background-size: cover;
+    max-height: 400px;
+  }
+  
+  /* .section-parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(56, 36, 52, 0.5);
+  } */
+  
+  .parallax-img {
+    position: relative;
+    height: 400px;
+
+  }
+
+
+
+ /************************/
+/******** CONTACT *******/
+/************************/
+
+#contact-mobile{
+    height: fit-content;
+    background: rgb(5,11,19);
+    background: linear-gradient(45deg, rgba(5,11,19,1) 0%, rgba(77,77,77,1) 49%, rgba(51,48,64,1) 100%);
+    text-align: center;
+    padding: 10px 40px;
+}
+
+
+
+/*******Animations **********/
+
+.appear{
+    opacity: 0;
+    transition: 1.2s all ease;
+}
+
+.appear.active{
+    opacity: 1;
+}
+
+.reveal{
+    opacity: 0;
+    transform: translateY(90px);
+    transition: 0.5s all ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rotate.active{
+    animation: rotation 1s;
+}
+
+@keyframes rotation {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
 
 }

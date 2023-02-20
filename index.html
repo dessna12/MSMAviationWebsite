@@ -11,6 +11,8 @@
     <script src="https://kit.fontawesome.com/9c9ea5f9c9.js" crossorigin="anonymous"></script>
     <title>MSM Aviation</title>
 </head>
+
+<!-- <body data-barba="wrapper"> -->
 <body>
 
 <!--MENU DEROULANT-->
@@ -28,8 +30,15 @@
 </nav>
 
 
+<!-- LOAD CONTAINER-->
+<!-- <div class="load-container">
+    <div class="loading-screen"></div>
+</div> -->
+
+
 <!-- SECTION HOME-->
-<section id="home">
+<main data-barba="container" data-barba-namespace="home-section">
+<section id="home" >
     <div id="image_cover">
 
         <div class="container-cover">
@@ -45,7 +54,7 @@
                         delivering helicopter parts at a fair price</h1>
                 </div>
                 <a href="/whoWeAre.html" class="discoverUs"><div>DISCOVER US</div></a>
-                <div class="desktop-hide expand"><a href="#whoWeAre-mobile"><span class="material-symbols-outlined">expand_more</span></a></div>
+                <div class="desktop-hide expand"><a href="#whoWeAre-repere"><span class="material-symbols-outlined">expand_more</span></a></div>
             </div>
         </div>
     </div>
@@ -55,49 +64,190 @@
 <!-- SECTION WHO WE ARE-->
 <section id="whoWeAre-mobile" class="desktop-hide">
 
-<h2>WHO WE ARE</h2>
+    <div id="whoWeAre-repere" class="repère"></div>
 
-<div class="text-intro">
-<p>MSM Aviation is a <strong>French company</strong> based in Lyon, France, operating in the <strong>helicopter industry</strong></p><br>
-<p>The driving principle of MSM Aviation is to be a <strong>reliable and transparent</strong> supplier of helicopter parts on all type of aircrafts at a <strong>fair price</strong></p>
-<br>
-</div>
+    <div class="border-bottom reveal">
+        <h2 class="reveal">WHO WE ARE</h2>
+    </div>
 
-<h3>WHY CHOSING US ?</h3>
+    <div class="text-intro reveal">
+        <p>MSM Aviation is a <strong>French company</strong> based in Lyon, France, operating in the <strong>helicopter industry</strong></p><br>
+        <p>The driving principle of MSM Aviation is to be a <strong>reliable and transparent</strong> supplier of helicopter parts on all type of aircrafts at a <strong>fair price</strong></p>
+        <br>
+    </div>
 
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h4>Broad Helicopter services</h4>
-<ul>
-    <li>Supply of helicopter parts for most aircraft</li>
-    <li>Supply of floatation and consumable</li>
-    <li>Repairs</li>
-    <li>Consulting</li>
-</ul>
+    <h3>WHY CHOSING US ?</h3>
 
-<i class="fa-solid fa-gears"></i>
-<h4>Technical knowledge</h4>
-<p>Sam Monnier, CEO, gained a lot of experience and technical knowledge in parts sales 
-    as a former flight instructor in the United States and Suriname 
-    and as a Sales Director in a European Heliport being in charge 
-    with Airbus business relationships.</p>
+    <i class="fa-solid fa-screwdriver-wrench rotate"></i>
+    <h4>Broad Helicopter services</h4>
+    <ul>
+        <li>Supply of helicopter parts for most aircraft</li>
+        <li>Supply of floatation and consumable</li>
+        <li>Repair services</li>
+        <li>Consulting in helicopter fleet</li>
+    </ul>
 
-<i class="fa-solid fa-globe"></i>
-<h4>Cultural diversity</h4>
-<p>At MSM Aviation we are proud to adapt ourselves to cultural diversity.
-    We have a worldwide clientbase and we can speak fluently 7 languages</p>
+    <i class="fa-solid fa-gears rotate"></i>
+    <h4>Technical knowledge</h4>
+    <p>Our company has an exhaustive knowledge and experience in helicopter parts sales. <br>
+        It is led by Sam Monnier, former flight instructor in the United States and Suriname 
+        and former Sales Director being in charge 
+        with Airbus business relationships.
+    </p>
 
-<i class="fa-solid fa-shield-halved"></i>
-<h4>Certified company</h4>
-<p>Our company is certified <strong>ISO 9001</strong> and is quarterly audited.
-We are also in the process of applying for EN9120 certification more specific to aviatation sector </p>
+    <i class="fa-solid fa-globe rotate"></i>
+    <h4>Cultural diversity</h4>
+    <p>At MSM Aviation, we are proud to adapt ourselves to cultural diversity.
+        We have a worldwide clientbase and we can speak fluently 7 languages</p>
 
-<div class="helicopterMaquette-mobile"></div>
+    <i class="fa-solid fa-shield-halved rotate"></i>
+    <h4>Certified company</h4>
+    <p>Our company is certified <strong>ISO 9001</strong> and is quarterly audited.
+    We are also in the process of applying for EN9120 certification more specific to aviation sector </p>
+
+    <div class="helicopterMaquette-mobile"></div>
+
+</section>
+
+<!-- SECTION CAPABILITIES-->
+<section id="capabilities-mobile" class="desktop-hide">
+
+    <div id="capabilities-repere" class="repère"></div>
+
+    <div class="border-bottom reveal">
+        <h2 class="reveal">OUR CAPABILITES</h2>
+    </div>
+
+    <div class="capabilities">
+        <div class="capability serv1">
+            <div class="number serv1">01</div>
+            <div class="title-capability serv1"> SUPPLY HELICOPTER PARTS</div>
+        </div>
+        <div class="text-capability">
+            <ul>
+                <li>Airbus Helicopter Parts : Colibri, Astar, Dauphin, Puma, Super Puma</li>
+                <li>Agusta Parts : AW109, AW139, AW169, AW189</li>
+                <li>Sykorsky S76</li>
+                <li>Pratt and Whitney</li>
+                <li>Turbomeca (SAFRAN)</li>
+                <li>Garmin airplane and helicopter</li>
+            </ul> 
+        </div>
+    </div>
+
+    <div class="capabilities">
+        <div class="capability serv2">
+            <div class="number serv2">02</div>
+            <div class="title-capability serv2">AIRBUS REPAIRS</div>
+        </div>
+        <div class="text-capability">
+            <p>We can provide any type of Airbus and engine repairs 
+                from Makila engines to Colibri epicyclics
+            </p>
+        </div>
+    </div>
+
+
+    <div class="capabilities">
+        <div class="capability serv3">
+            <div class="number serv3">03</div>
+            <div class="title-capability serv3">SUPPLY FLOATATION DEVICE</div>
+        </div>
+        <div class="text-capability">
+            <p>We supply any <strong>Zodiac device: </strong> <br>
+                Life raft, Floatation device, <br> 
+                Cylinder bottles, Life jackets, <br>
+                Booster pumps
+            </p>
+        </div>
+    </div>
+
+
+    <div class="capabilities">
+        <div class="capability serv4">
+            <div class="number serv4">04</div>
+            <div class="title-capability serv4">AVIONICS</div>
+        </div>
+        <div class="text-capability">
+            <p>Altimeters, fuel flow indicators, <br>
+                N-Rotor inidcators, CDV, <br>
+                Primary flight display, <br>
+                Starter Generator </p>
+        </div>
+    </div>
+
+    <div class="capabilities">
+        <div class="capability serv5">
+            <div class="number serv5">05</div>
+            <div class="title-capability serv5">SUPPLY OF CONSUMABLES</div>
+        </div>
+        <div class="text-capability">
+            <p>Ground equipment: kit aero, Dedienne aerospace <br>
+                Miscellaneous tools (tightening tool, fasteners, wires
+                lockdown) <br>
+                Painting (SATAIR, AVIATEC) <br>
+                Akzonobel, PPG (…) <br>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION BANNER IMAGE-->
+<section class=" section-parallax desktop-hide">
+    <div class="parallax-img"></div>
+</section>
+
+
+<!-- SECTION CONTACT-->
+<section id="contact-mobile" class="desktop-hide">
+
+    <div id="capabilities-repere" class="repère"></div>
+
+    <div class="border-bottom reveal">
+        <h2 class="reveal">CONTACT</h2>
+    </div>
+
+    <div class="Sam">
+        <h3>SAM MONNIER <br> CEO</h3>
+    </div>
+
+    <div class="container3 téléphone">
+        <i class="fa-solid fa-phone"></i>
+        <div class="textTel">+33(0)781003550</div> 
+    </div>
+
+    <div class="container3 mail">
+        <i class="fas fa-envelope"></i>
+        <div class="textMail">contact@msmaviation.com</div> 
+    </div>
+
+    <div class="office explain off1">
+        <p class="titreOffice">OUR OFFICE</p>
+        <p class="textoffice1">Well located in France close to the city of Lyon and Airbus suppliers, we insure you best advantage for transports </p>
+    </div>
+    <div class="office adresse off2">
+        <p>MSM Aviation <br>
+            1 impasse du Cluzel, <br>
+            69200 Vénissieux <br>
+            FRANCE 
+            </p>
+    </div>
+
+    <div class="office">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91707.08840911282!2d4.7953861189155855!3d45.745898577007644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c26da48c32c7%3A0x983163d2330b12d8!2s1%20Imp.%20du%20Cluzel%2C%2069200%20V%C3%A9nissieux!5e0!3m2!1sfr!2sfr!4v1675936553362!5m2!1sfr!2sfr" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="desktop-hide expand"><a href="#"><span class="material-symbols-outlined">expand_less</span></a></div>
+    <div>BACK TO TOP</div>
 
 
 
 </section>
 
 
+
+
+</main>
 
 
 
@@ -114,7 +264,7 @@ include('footer.php');
 <!-- FOOTER -->
 <footer>
     <div id="footer">
-        <p>MSM AVIATION, 1 impasse du Cluzel, 69200 Venissieux FRANCE |  <span><a href="#">Disclaimer</a></span>  | <span><a href="#">General Terms of sale</a></span>  | All rights reserved ©2023 MSM Aviation 
+        <p>MSM AVIATION, 1 impasse du Cluzel, 69200 Venissieux FRANCE |  <span><a href="#">Disclaimer</a></span>  | <span><a href="/assets/GENERAL TERMS AND CONDITIONS OF SALES - MSM Aviation.pdf">General Terms and Conditions of Sale</a></span>  | All rights reserved ©2023 MSM Aviation 
         </p>
 
         <!-- <a href="https://www.flaticon.com/free-icons/service" title="service icons">Service icons created by Vectors Tank - Flaticon</a> -->
@@ -124,6 +274,11 @@ include('footer.php');
 
 
 <!-- SCRIPT -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 <script src="animations.js"></script>
 
 
