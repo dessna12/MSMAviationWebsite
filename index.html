@@ -24,7 +24,7 @@
             <li><a href="/index.html" class="element-menu">HOME</a></li>
             <li><a href="/whoWeAre.html" class="element-menu">WHO WE ARE</a></li>
             <li><a href="/ourCapabilities.html" class="element-menu">OUR CAPABABILITIES</a></li>
-            <li><a href="/contact.html" class="element-menu">CONTACT</a></li>
+            <li><a href="/contact-old.html" class="element-menu">CONTACT</a></li>
         </ul>
     </div>
 </nav>
@@ -64,7 +64,7 @@
 <!-- SECTION WHO WE ARE-->
 <section id="whoWeAre-mobile" class="desktop-hide">
 
-    <div id="whoWeAre-repere" class="repère"></div>
+    <div id="whoWeAre/" class="repère"></div>
 
     <div class="border-bottom reveal">
         <h2 class="reveal">WHO WE ARE</h2>
@@ -105,18 +105,20 @@
     <p>Our company is certified <strong>ISO 9001</strong> and is quarterly audited.
     We are also in the process of applying for EN9120 certification more specific to aviation sector </p>
 
-    <div class="helicopterMaquette-mobile"></div>
+    <div class="space"></div>
 
 </section>
 
 <!-- SECTION CAPABILITIES-->
 <section id="capabilities-mobile" class="desktop-hide">
 
-    <div id="capabilities-repere" class="repère"></div>
+    <div id="capabilities/" class="repère"></div>
 
     <div class="border-bottom reveal">
         <h2 class="reveal">OUR CAPABILITES</h2>
     </div>
+
+    <div class="helicopterMaquette-mobile slide-right"></div>
 
     <div class="capabilities">
         <div class="capability serv1">
@@ -126,7 +128,7 @@
         <div class="text-capability">
             <ul>
                 <li>Airbus Helicopter Parts : Colibri, Astar, Dauphin, Puma, Super Puma</li>
-                <li>Agusta Parts : AW109, AW139, AW169, AW189</li>
+                <li>Agusta Parts : AW109</li>
                 <li>Sykorsky S76</li>
                 <li>Pratt and Whitney</li>
                 <li>Turbomeca (SAFRAN)</li>
@@ -142,7 +144,7 @@
         </div>
         <div class="text-capability">
             <p>We can provide any type of Airbus and engine repairs 
-                from Makila engines to Colibri epicyclics
+                from <strong>Makila engines</strong> to <strong>Colibri epicyclics</strong>
             </p>
         </div>
     </div>
@@ -187,9 +189,11 @@
                 lockdown) <br>
                 Painting (SATAIR, AVIATEC) <br>
                 Akzonobel, PPG (…) <br>
+                <br>
             </p>
         </div>
     </div>
+    <div class="space"></div>
 </section>
 
 <!-- SECTION BANNER IMAGE-->
@@ -201,22 +205,22 @@
 <!-- SECTION CONTACT-->
 <section id="contact-mobile" class="desktop-hide">
 
-    <div id="capabilities-repere" class="repère"></div>
+    <div id="contact/" class="repère"></div>
 
     <div class="border-bottom reveal">
         <h2 class="reveal">CONTACT</h2>
     </div>
 
-    <div class="Sam">
-        <h3>SAM MONNIER <br> CEO</h3>
+    <div class="Sam reveal">
+        <h3>SAM MONNIER<br> CEO</h3>
     </div>
 
-    <div class="container3 téléphone">
+    <div class="container3 téléphone appear">
         <i class="fa-solid fa-phone"></i>
         <div class="textTel">+33(0)781003550</div> 
     </div>
 
-    <div class="container3 mail">
+    <div class="container3 mail appear">
         <i class="fas fa-envelope"></i>
         <div class="textMail">contact@msmaviation.com</div> 
     </div>
@@ -226,25 +230,39 @@
         <p class="textoffice1">Well located in France close to the city of Lyon and Airbus suppliers, we insure you best advantage for transports </p>
     </div>
     <div class="office adresse off2">
+        <i class="fa-solid fa-location-dot"></i>   
         <p>MSM Aviation <br>
             1 impasse du Cluzel, <br>
             69200 Vénissieux <br>
             FRANCE 
-            </p>
+        </p>
     </div>
 
-    <div class="office">
+    <!-- <div class="office">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91707.08840911282!2d4.7953861189155855!3d45.745898577007644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c26da48c32c7%3A0x983163d2330b12d8!2s1%20Imp.%20du%20Cluzel%2C%2069200%20V%C3%A9nissieux!5e0!3m2!1sfr!2sfr!4v1675936553362!5m2!1sfr!2sfr" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    </div> -->
 
     <div class="desktop-hide expand"><a href="#"><span class="material-symbols-outlined">expand_less</span></a></div>
-    <div>BACK TO TOP</div>
+    <div class="backTop">BACK TO TOP</div>
 
 
 
 </section>
 
+<footer class="desktop-hide">
+    <div id="footer-mobile">
+        <p>MSM AVIATION<br> 
+            1 impasse du Cluzel,<br>
+             69200 Venissieux FRANCE<br>
+             <span><a href="#">Disclaimer</a></span> <br>
+             <span><a href="/assets/GENERAL TERMS AND CONDITIONS OF SALES - MSM Aviation.pdf">General Terms and Conditions of Sale</a></span><br>
+              All rights reserved ©2023 MSM Aviation 
+        </p>
 
+        <!-- <a href="https://www.flaticon.com/free-icons/service" title="service icons">Service icons created by Vectors Tank - Flaticon</a> -->
+
+    </div>
+</footer>
 
 
 </main>
@@ -262,7 +280,7 @@ include('footer.php');
 
 
 <!-- FOOTER -->
-<footer>
+<footer class="mobile-hide">
     <div id="footer">
         <p>MSM AVIATION, 1 impasse du Cluzel, 69200 Venissieux FRANCE |  <span><a href="#">Disclaimer</a></span>  | <span><a href="/assets/GENERAL TERMS AND CONDITIONS OF SALES - MSM Aviation.pdf">General Terms and Conditions of Sale</a></span>  | All rights reserved ©2023 MSM Aviation 
         </p>

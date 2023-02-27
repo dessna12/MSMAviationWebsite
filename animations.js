@@ -33,7 +33,7 @@ window.addEventListener("scroll", appear);
 
 //FUNCTIONS to reveal elements on scroll
 function appear() {
-    var appears = document.querySelectorAll(".appear, .reveal, .rotate");
+    var appears = document.querySelectorAll(".appear, .reveal, .rotate, .slide-right");
   
     for(let i = 0; i < appears.length; i++) {
       var windowHeight = window.innerHeight;
