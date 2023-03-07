@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 //GET ACCESS DOM
-const elementMenu = document.querySelectorAll("a.element-menu");
+const elementMenu = document.querySelectorAll("button.element-menu");
 const burgerMenu = document.querySelector("span.material-symbols-outlined");
 const checkboxMenu = document.getElementById("mobile");
 
@@ -26,7 +26,7 @@ checkboxMenu.addEventListener('change', ($event) => {
 });
 
 
-//Fais apparaitre les éléments au fur et à mesure on scroll
+//Fais apparaitre les elements au fur et à mesure on scroll
 window.addEventListener("scroll", appear);
 
 
@@ -49,66 +49,45 @@ function appear() {
   }
 
 
-
-//TRANSITIONS DE PAGE
-function pageTransition() {
-    var tl = gsap.timeline();
-    tl.to(".loading-screen", {
-        duration: 0.5,
-        width: "100%",
-        top: "0%",
-        ease: "Expo.easeInOut",
-    });
-
-    tl.to(".loading-screen", {
-        duration: 1,
-        width: "100%",
-        top: "100%",
-        ease: "Expo.easeInOut",
-        delay: 0.3,
-    });
-    tl.set(".loading-screen", { left: "-100%" });
-}
-
-function contentAnimation() {
-    var tl = gsap.timeline();
-    tl.from(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.2 });
+//FUNCTIONS pour rediriger sur les pages en version grand ecran
+//et scroll si version mobile 
+function scrollToHome(){
+    if (window.matchMedia('(max-width: 650px)').matches) {
+        document.getElementById("home").scrollIntoView();
+    } else {
+        window.location.replace("index.html");
+    }
 }
 
 
-$(function () {
-    barba.init({
-        sync: true,
-
-        transitions: [
-            {
-                async leave(data) {
-                    const done = this.async();
-
-                    pageTransition();
-                    await delay(500);
-                    done();
-                }
-
-                // async enter(data) {
-                //     contentAnimation();
-                // },
-
-                // async once(data) {
-                //     contentAnimation();
-                // },
-            },
-        ],
-    });
-});
-
-function delay(n) {
-    n = n || 2000;
-    return new Promise((done) => {
-        setTimeout(() => {
-            done();
-        }, n);
-    });
+function scrollToWhoWeAre() {
+    if (window.matchMedia('(max-width: 650px)').matches) {
+        document.getElementById("whoWeAre-div").scrollIntoView();
+    } else {
+        window.location.replace("whoWeAre.html");
+    }
 }
+
+function scrollToCapabilities() {
+    if (window.matchMedia('(max-width: 650px)').matches) {
+        document.getElementById("capabilities-div").scrollIntoView();
+    } else {
+        window.location.replace("ourCapabilities.html");
+    }
+}
+
+function scrollToContact() {
+    if (window.matchMedia('(max-width: 650px)').matches) {
+        document.getElementById("contact-div").scrollIntoView();
+    } else {
+        window.location.replace("contact.html");
+    }
+}
+
+//Ouverture du pop up de Disclaimer sur la version mobile. 
+function popUpDisclaimer() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
 
 

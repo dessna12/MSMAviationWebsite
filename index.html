@@ -12,7 +12,6 @@
     <title>MSM Aviation</title>
 </head>
 
-<!-- <body data-barba="wrapper"> -->
 <body>
 
 <!--MENU DEROULANT-->
@@ -21,24 +20,18 @@
         <label for="mobile"><span class="material-symbols-outlined burger">menu</span></label>
         <input type="checkbox" id="mobile" role="button">
         <ul class="menu">
-            <li><a href="/index.html" class="element-menu">HOME</a></li>
-            <li><a href="/whoWeAre.html" class="element-menu">WHO WE ARE</a></li>
-            <li><a href="/ourCapabilities.html" class="element-menu">OUR CAPABABILITIES</a></li>
-            <li><a href="/contact-old.html" class="element-menu">CONTACT</a></li>
+            <li><button onclick="scrollToHome()" class="element-menu">HOME</button></li>
+            <li><button onclick="scrollToWhoWeAre()" class="element-menu">WHO WE ARE</button></li>
+            <li><button onclick="scrollToCapabilities()" class="element-menu">OUR CAPABILITIES</button></li>
+            <li><button onclick="scrollToContact()" class="element-menu">CONTACT</button></li>
         </ul>
     </div>
 </nav>
 
 
-<!-- LOAD CONTAINER-->
-<!-- <div class="load-container">
-    <div class="loading-screen"></div>
-</div> -->
-
-
 <!-- SECTION HOME-->
-<main data-barba="container" data-barba-namespace="home-section">
-<section id="home" >
+<main>
+<section id="home">
     <div id="image_cover">
 
         <div class="container-cover">
@@ -53,18 +46,19 @@
                     <h1>Excellence in the skies: <br>
                         delivering helicopter parts at a fair price</h1>
                 </div>
-                <a href="/whoWeAre.html" class="discoverUs"><div>DISCOVER US</div></a>
-                <div class="desktop-hide expand"><a href="#whoWeAre-repere"><span class="material-symbols-outlined">expand_more</span></a></div>
+                <button onclick="scrollToWhoWeAre()" class="discoverUs">DISCOVER US</button>
+                <div class="desktop-hide expand"><a href="#whoWeAre-div"><span class="material-symbols-outlined">expand_more</span></a></div>
             </div>
         </div>
     </div>
 </section>
 
 
+
 <!-- SECTION WHO WE ARE-->
 <section id="whoWeAre-mobile" class="desktop-hide">
 
-    <div id="whoWeAre/" class="repère"></div>
+    <div id="whoWeAre-div" class="repere"></div>
 
     <div class="border-bottom reveal">
         <h2 class="reveal">WHO WE ARE</h2>
@@ -112,7 +106,7 @@
 <!-- SECTION CAPABILITIES-->
 <section id="capabilities-mobile" class="desktop-hide">
 
-    <div id="capabilities/" class="repère"></div>
+    <div id="capabilities-div" class="repere"></div>
 
     <div class="border-bottom reveal">
         <h2 class="reveal">OUR CAPABILITES</h2>
@@ -121,11 +115,11 @@
     <div class="helicopterMaquette-mobile slide-right"></div>
 
     <div class="capabilities">
-        <div class="capability serv1">
+        <div class="capability serv1 appear">
             <div class="number serv1">01</div>
             <div class="title-capability serv1"> SUPPLY HELICOPTER PARTS</div>
         </div>
-        <div class="text-capability">
+        <div class="text-capability appear">
             <ul>
                 <li>Airbus Helicopter Parts : Colibri, Astar, Dauphin, Puma, Super Puma</li>
                 <li>Agusta Parts : AW109</li>
@@ -137,26 +131,27 @@
         </div>
     </div>
 
-    <div class="capabilities">
+    <div class="capabilities appear">
         <div class="capability serv2">
             <div class="number serv2">02</div>
             <div class="title-capability serv2">AIRBUS REPAIRS</div>
         </div>
-        <div class="text-capability">
-            <p>We can provide any type of Airbus and engine repairs 
-                from <strong>Makila engines</strong> to <strong>Colibri epicyclics</strong>
+        <div class="text-capability appear">
+            <p>We can provide any type of Airbus <br>
+                and engine repairs from Makila engines <br>
+                to Colibri epicyclics
             </p>
         </div>
     </div>
 
 
-    <div class="capabilities">
+    <div class="capabilities appear">
         <div class="capability serv3">
             <div class="number serv3">03</div>
             <div class="title-capability serv3">SUPPLY FLOATATION DEVICE</div>
         </div>
-        <div class="text-capability">
-            <p>We supply any <strong>Zodiac device: </strong> <br>
+        <div class="text-capability appear">
+            <p>We supply any Zodiac device: <br>
                 Life raft, Floatation device, <br> 
                 Cylinder bottles, Life jackets, <br>
                 Booster pumps
@@ -165,12 +160,12 @@
     </div>
 
 
-    <div class="capabilities">
+    <div class="capabilities appear">
         <div class="capability serv4">
             <div class="number serv4">04</div>
             <div class="title-capability serv4">AVIONICS</div>
         </div>
-        <div class="text-capability">
+        <div class="text-capability appear">
             <p>Altimeters, fuel flow indicators, <br>
                 N-Rotor inidcators, CDV, <br>
                 Primary flight display, <br>
@@ -178,17 +173,17 @@
         </div>
     </div>
 
-    <div class="capabilities">
+    <div class="capabilities appear">
         <div class="capability serv5">
             <div class="number serv5">05</div>
             <div class="title-capability serv5">SUPPLY OF CONSUMABLES</div>
         </div>
-        <div class="text-capability">
+        <div class="text-capability appear">
             <p>Ground equipment: kit aero, Dedienne aerospace <br>
                 Miscellaneous tools (tightening tool, fasteners, wires
                 lockdown) <br>
                 Painting (SATAIR, AVIATEC) <br>
-                Akzonobel, PPG (…) <br>
+                Akzonobel, PPG <br>
                 <br>
             </p>
         </div>
@@ -205,7 +200,7 @@
 <!-- SECTION CONTACT-->
 <section id="contact-mobile" class="desktop-hide">
 
-    <div id="contact/" class="repère"></div>
+    <div id="contact-div" class="repere"></div>
 
     <div class="border-bottom reveal">
         <h2 class="reveal">CONTACT</h2>
@@ -227,14 +222,19 @@
 
     <div class="office explain off1">
         <p class="titreOffice">OUR OFFICE</p>
-        <p class="textoffice1">Well located in France close to the city of Lyon and Airbus suppliers, we insure you best advantage for transports </p>
+        <p class="textoffice1">Strategically located in France in Lyon, 
+            our office is at the crossroads of route des Alpes and South of France. <br>
+            Close by Airbus suppliers, we established our office in the former capital of France.
+            Any chance you pass by, feel free to come and say hello to us ! </p>
     </div>
     <div class="office adresse off2">
         <i class="fa-solid fa-location-dot"></i>   
         <p>MSM Aviation <br>
             1 impasse du Cluzel, <br>
             69200 Vénissieux <br>
-            FRANCE 
+            FRANCE <br>
+            <br>
+            <a href="https://goo.gl/maps/FJuSWD31quB5TCCH8">FIND US ON GOOGLE</a>
         </p>
     </div>
 
@@ -254,10 +254,24 @@
         <p>MSM AVIATION<br> 
             1 impasse du Cluzel,<br>
              69200 Venissieux FRANCE<br>
-             <span><a href="#">Disclaimer</a></span> <br>
-             <span><a href="/assets/GENERAL TERMS AND CONDITIONS OF SALES - MSM Aviation.pdf">General Terms and Conditions of Sale</a></span><br>
-              All rights reserved ©2023 MSM Aviation 
         </p>
+        <div class="popup" onclick="popUpDisclaimer()">Disclaimer
+            <span class="popuptext" id="myPopup">
+                <p>The information contained in this website is for general information purposes only. <br>
+                    <br> 
+                    The information is provided by MSM Aviation and while we endeavour to keep the 
+                    information up to date and correct, we make no representations or warranties 
+                    of any kind, express or implied, about the completeness, accuracy, reliability, 
+                    suitability or availability with respect to the website or the information, 
+                    products, services, or related graphics contained on the website for any purpose. <br>
+                    Any reliance you place on such information is therefore strictly at your own risk. <br>
+                </p>
+            </span>
+        </div>   
+        <br>
+            <!-- <span><a href="/disclaimer.html">Disclaimer</a></span> <br> -->
+        <span><a href="/assets/GENERAL TERMS AND CONDITIONS OF SALES - MSM Aviation.pdf">General Terms and Conditions of Sale</a></span><br>
+        <p>All rights reserved ©2023 MSM Aviation</p>
 
         <!-- <a href="https://www.flaticon.com/free-icons/service" title="service icons">Service icons created by Vectors Tank - Flaticon</a> -->
 
@@ -268,12 +282,7 @@
 </main>
 
 
-
-
-
-
 <!-- SECTION -->
-
 <!-- <?php 
 include('footer.php');
 ?> -->
@@ -282,7 +291,7 @@ include('footer.php');
 <!-- FOOTER -->
 <footer class="mobile-hide">
     <div id="footer">
-        <p>MSM AVIATION, 1 impasse du Cluzel, 69200 Venissieux FRANCE |  <span><a href="#">Disclaimer</a></span>  | <span><a href="/assets/GENERAL TERMS AND CONDITIONS OF SALES - MSM Aviation.pdf">General Terms and Conditions of Sale</a></span>  | All rights reserved ©2023 MSM Aviation 
+        <p>MSM AVIATION, 1 impasse du Cluzel, 69200 Venissieux FRANCE |  <span><a href="/disclaimer.html">Disclaimer</a></span>  | <span><a href="/assets/GENERAL TERMS AND CONDITIONS OF SALES - MSM Aviation.pdf">General Terms and Conditions of Sale</a></span>  | All rights reserved ©2023 MSM Aviation 
         </p>
 
         <!-- <a href="https://www.flaticon.com/free-icons/service" title="service icons">Service icons created by Vectors Tank - Flaticon</a> -->

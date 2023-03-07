@@ -25,6 +25,7 @@
     max-width: 100vw;
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
+    font-weight:400;
 }
 
 html{
@@ -40,32 +41,8 @@ body{
     display: none;
 }
 
-/************************************/
-/******** LOAD CONTAINER ***********/
-/**********************************/
-
-
-.loading-screen {
-    position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    background-color: var(--backgroung-gris);
-    width: 0%;
-    height: 100%;
-}
-
-.load-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 10;
-    pointer-events: none;
-}
-
+/************* Developpement de base pour ecran PC ************/
+/*************************************************************/
 
 
 /********************/
@@ -79,12 +56,10 @@ nav{
     position: fixed;
     display: flex;
     overflow-y: visible;
-    border-bottom: red solid 1px;
     z-index: 6;
     align-items: center;
     justify-content: flex-end;
     padding-right: 15px;
-
 }
 
 nav label{
@@ -121,6 +96,13 @@ nav a{
     font-size: 1.2em;
 }
 
+.menu button{
+    background-color: inherit;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
 .menu li::after{
     content:'';
     display: block;
@@ -145,20 +127,16 @@ nav a{
 #home{
     height: 100vh;
     background-color: var(--black-gradiant);
-
-
 }
 
 #home .container-cover{
     display: flex;
     padding: 68vh 5vw 0 10vw;
-    border: solid yellow 1px;
     height: 100vh;
     animation: zoom-out 1.9s ease-in-out 1s forwards;
 }
 
 #home .nonMovingDiv{
-    border: pink 1px solid;
     display: block;
     position: relative;
     overflow: hidden;
@@ -173,7 +151,6 @@ nav a{
     height: 20vh;
     width: 21vw;
     min-width: 250px;
-    border: solid red 1px;
     overflow: hidden;
     opacity: 0;
     animation: showLogo 0.8s ease-in-out 1.8s forwards;
@@ -183,13 +160,11 @@ nav a{
     display: flex;
     flex-direction: column;
     padding: 20px 0px;
-    border: solid orange 1px;
 
 }
 
 .topText{
     overflow: hidden;
-    border: greenyellow solid 1px;
     padding: 0 40px;
 }
 
@@ -203,15 +178,15 @@ h1{
     line-height: 1.25em;
     opacity:0;
     animation: showTopText 0.4s ease-in-out 2.1s forwards;
-
 }
 
 #home .discoverUs{
-    /* border: solid 1px whitesmoke; */
     text-align: center;
     align-self: center;
     padding: 0.8em;
     width: 22%;
+    background-color: inherit;
+    cursor: pointer;
     font-size: 1.2em;
     font-weight: 500;
     margin-top: 25px;
@@ -225,9 +200,9 @@ h1{
     text-decoration: none;
 }
 
-/* .discoverUs:hover a{
-    color: #303134;
-} */
+#home a >div{
+    font-weight: 500;
+}
 
 
 .discoverUs {
@@ -250,27 +225,6 @@ h1{
   }
 
 
-
-/**** Animation shadow box ***/
-/* .discoverUs{
-    box-shadow: 
-        0.3em 0.3em 0 0 whitesmoke,
-        inset 0.3em 0.3em 0 0 whitesmoke;
-    transition: 0.25s;
-}
-
-.discoverUs:hover{
-    box-shadow: 
-        0 0 0 0 whitesmoke,
-        inset 6em 3.5em 0 0 whitesmoke;
-    cursor: pointer;
-} */
-
-
-
-
-
-
 /**************************/
 /*** SECTION WHO WE ARE ***/
 /**************************/
@@ -285,29 +239,30 @@ h1{
 #sideimg{
     height: 100vh;
     width: 100%;
-    background: url(img/img3\ -S.jpg);
+    background: url(img/img3\ -S.png);
     background-position: left;
     background-size:contain;
     background-repeat: no-repeat;
-    border: yellow 1px solid;
     position: absolute;
     display: flex;
     justify-content: end;
+    opacity: 0;
+    animation: appear 1s linear 0.7s forwards;
 }
 
 
 #whoWeAre .container1{
-    width: 61vw;
+    width: 63vw;
     min-width: 600px;
     height: calc(100vh - var(--heightNav));
     z-index: 3;
-    border: greenyellow 1px solid;
     position:relative;
     display: flex;
     flex-direction: row;
     margin-top: var(--heightNav);
     margin-left: 1vw;
 }
+
 
 .logo{
     background: url(img/White\ logo.png);
@@ -318,7 +273,6 @@ h1{
     width: 12vw;
     z-index: 1;
     position: relative;
-    border: red 1px solid;
     position: relative;
     top:0;
     left:0;
@@ -328,16 +282,15 @@ h1{
 #whoWeAre .container2{
     display: flex;
     flex-direction: row;
-    border: blue 1px solid;
     flex-basis: 50%;
-    margin-top: 5%;
+    margin-top: 5%; 
+    align-items: center;
 }
 
 
 #whoWeAre .container3-1{
-    border: 1px solid pink;
     flex-basis: 1;
-    padding: 1em 1em;
+    padding: 0 4.5em 0 1.5em;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -345,8 +298,13 @@ h1{
 
 }
 
+#whoWeAre .story{
+    padding: 0 0 30px 0;
+    animation: slide-text 1.2s linear 0.8s forwards;
+}
+
 #whoWeAre .container3-1 p{
-    font-size: 1.25rem;
+    font-size: 1.17rem;
     font-weight:400;
     line-height: 1.5em;
     letter-spacing:0.01rem;
@@ -357,19 +315,19 @@ h1{
 #whoWeAre .p1{
     opacity: 0;
     transform: translateY(90px);
-    animation: reveal 0.25s ease-in-out 0.3s forwards;
+    animation: reveal 0.35s ease-in-out 0.7s forwards;
 }
 
 #whoWeAre .p2{
     opacity: 0;
     transform: translateY(90px);
-    animation: reveal 0.25s ease-in-out 0.4s forwards;
+    animation: reveal 0.35s ease-in-out 0.7s forwards;
 }
 
 #whoWeAre .p3{
     opacity: 0;
     transform: translateY(90px);
-    animation: reveal 0.25s ease-in-out 0.5s forwards;
+    animation: reveal 0.35s ease-in-out 0.7s forwards;
 }
 
 
@@ -382,7 +340,8 @@ h1{
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -550px;
-    animation: slide-text 1.2s linear 2s forwards;
+    animation: slide-text 1.2s linear 2.3s forwards;
+    font-weight:550;
 }
 
 
@@ -390,7 +349,6 @@ h1{
     flex-basis: 1;
     display: flex;
     flex-direction: column;
-    border: 1px solid pink;
     padding: 1em 1.8em;
     text-align: left;
     justify-content: center;
@@ -402,7 +360,6 @@ h1{
     flex-direction: row;
     justify-content: space-around;
     flex-basis: 1,3;
-    border: 1px solid purple;
     padding: 1em 0;
     text-align: left;
     align-items: center;
@@ -423,7 +380,6 @@ h1{
 
 #whoWeAre .text-services{
     line-height: 1.5em;
-    border: grey dashed 1px;
     padding-right: 20px;
     flex-grow: 1;
 }
@@ -435,10 +391,11 @@ h1{
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -500px;
+    font-weight: 500;
 }
 
 #whoWeAre .h3-1{
-    animation: slide-text 1.2s linear 2.7s forwards;
+    animation: slide-text 1.2s linear 2.9s forwards;
 }
 
 #whoWeAre .h3-2{
@@ -446,21 +403,19 @@ h1{
 }
 
 #whoWeAre .h3-3{
-    animation: slide-text 1.2s linear 4.1s forwards;
+    animation: slide-text 1.2s linear 3.9s forwards;
 }
 
 #whoWeAre .opacity{
     opacity: 0;
-    animation: opacity 1.5s ease-in-out 5.5s forwards;
+    animation: opacity 1.5s ease-in-out 5s forwards;
 }
-
 
 
 #whoWeAre li{
     list-style-position: inside;
     list-style-type:circle;
 }
-
 
 #whoWeAre .world{
     background: url(img/icone-world.png);
@@ -478,7 +433,6 @@ h1{
 }
 
 
-
 /********************************/
 /*** SECTION OUR CAPABILITIES ***/
 /********************************/
@@ -490,14 +444,11 @@ h1{
 }
 
 
-
 #fullcontainer{
     height: 100vh;
     width: 100%;
-    border: yellow 1px solid;
     position: absolute;
     opacity: 1;
-
 }
 
 
@@ -505,14 +456,13 @@ h1{
     width: 100vw;
     height: calc(100vh - var(--heightNav));
     z-index: 3;
-    border: greenyellow 1px solid;
     position: relative;
     display: flex;
     flex-direction: column;
     margin-top: var(--heightNav);
     margin-left: 1vw;
-
 }
+
 
 #ourCapabilities .container2{
     display: flex;
@@ -520,21 +470,20 @@ h1{
     flex-wrap: wrap;
     justify-content: space-between;
     height: 80%;
-    border: blue 1px solid;
     background: url(img/img3.png);
-    background-position: 50% 90%;
+    background-position: 53% 90%;
     background-size:55%;
     background-repeat: no-repeat;
-    animation: zoomOutFade 0.5s ease-in-out forwards;
+    opacity: 0;
+    animation: zoomOutFade 0.5s ease-in-out 0.4s forwards;
 }
 
 #ourCapabilities .service{
-    border: pink 1px solid;
     display: flex;
     flex-direction: row;
     width: 30%;
-    padding-left: 30px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
 #ourCapabilities .chiffre{
@@ -553,6 +502,7 @@ h1{
 #fullcontainer ul {
     list-style-type: none;
     font-size: 1.1em;
+    padding-right: 2.4vw;
   }
 
 #fullcontainer ul li:before {
@@ -560,31 +510,32 @@ h1{
   }
 
 
-
-.s1{
-    padding-top: 50px;
-    animation: zoomOutFade 1s ease-in-out 0.4s forwards;
+  .s1{
+    padding-top: 40px;
+    animation: zoomOutFade 1s ease-in-out 0.8s forwards;
     opacity:0;
 }
 
 .s2{
-    animation: zoomOutFade 1s ease-in-out 0.6s forwards;
+    animation: zoomOutFade 1s ease-in-out 1s forwards;
     opacity: 0;
 }
 
 .s3{
     padding-top: 50px;
-    animation: zoomOutFade 1s ease-in-out 0.8s forwards;
+    animation: zoomOutFade 1s ease-in-out 1.2s forwards;
     opacity: 0;
 }
 
 .s4{
-    animation: zoomOutFade 1s ease-in-out 1s forwards;
+    animation: zoomOutFade 1s ease-in-out 1.4s forwards;
     opacity: 0;
+    padding-top: 20px;
 }
 
 .s5{
-    animation: zoomOutFade 1s ease-in-out 1.2s forwards;
+    padding-top: 50px;
+    animation: zoomOutFade 1s ease-in-out 1.6s forwards;
     opacity: 0; 
 }
 
@@ -630,80 +581,65 @@ h1{
 
 #contact .container1{
     width: 100vw;
-    border: greenyellow 1px solid;
     position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    opacity: 0;
+    animation: appear 0.8s ease-in-out 0.5s forwards;
 }
 
 
 #banner{
     border: #2F528F solid 1px;
     width: 100vw;
-    min-height: 40vh;
+    min-height: 37vh;
     background-image: url(/img/img7.jpg);
     background-size: cover;
     background-position: 0% 15%;
     padding-top: var(--heightNav);
-    opacity: 0.7;
+    opacity: 1;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
 #banner h2{
-    margin-top: 14vh;
+    margin-top: 13vh;
     font-size: 2.8em;
-    color:#050B13;
-    border: #050B13 1PX SOLID;
+    color:#303134;
     font-weight:900;
-    justify-self: center;
-
+    justify-self:center;
+    border-radius: 9%;
 }
 
-#banner .vide{
-    width: 220px;
-}
-
-/* #banner button{
-    color: var(--backgroung-gris);
-    margin-right: 2vw;
-    margin-top: 9vh;
-    padding: 0.5em;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    border: var(--backgroung-gris) 2px solid;
-    color: var(--backgroung-gris);
-    background-color: inherit;
-} */
 
 #contact .container2{
-    border: pink solid 2px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 60vw;
+    width: 55vw;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(2px);
+    margin: 20px;
 }
 
 #contact .infoSam{
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    border: yellow 1px solid;
 }
 
 #contact .Sam{
-    font-size: 1.7em;
+    font-size: 1.55em;
     text-align: center;
     padding: 1em;
 }
@@ -713,7 +649,6 @@ h1{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    border: #4185B5 1px solid;
     padding: 1.5em 0;
 }
 
@@ -729,6 +664,10 @@ h1{
     padding: 0 1em;
 }
 
+#contact hr{
+    width: 35%;
+}
+
 #contact .subInfos{
     display: flex;
     flex-direction: row;
@@ -736,7 +675,6 @@ h1{
     align-items: center;
     font-size: 1.5em;
     flex-basis: 33%;
-    border: #7D807F 1px solid;
 }
 
 #contact .subInfo{
@@ -751,33 +689,29 @@ h1{
     justify-content: center;
     padding: 0.5em;
     font-size: 0.8em;
-    font-weight: bold;
     cursor: pointer;
     border: whitesmoke 2px solid;
     color: whitesmoke;
     background-color: inherit;
+    font-weight: 500;
 }
 
 #contact button:hover{
     background-color: whitesmoke;
     color: #303134;
-    padding: 0.6em;
     transition: 0.3s;
 }
-
 
 
 #contact .offices{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: #427388 1px solid;
     border-radius: 20px;
 
 }
 
 #contact .office {
-    border: red solid 1px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -807,14 +741,9 @@ h1{
 }
 
 #contact .off2 i{
-    font-size: 2.1em;
-    padding: 0 1.1em;
-}
-
-#contact .off2::before, .off2::after{
-    content:"";
-    height: 80%;
-    padding: 0;
+    font-size: 2em;
+    padding: 0 0.5em;
+    align-self: center;
 }
 
 #contact .offices p{
@@ -822,172 +751,16 @@ h1{
 }
 
 #contact .adresse{
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items:center;
     font-size: 0.9em;
-    flex-basis: 25%;
+    flex-basis: 30%;
 }
 
 #contact .space{
-    height: 50px;
+    max-height: 50px;
+    flex-shrink: 1;
 }
-
-
-
-/******section contact 2 ***/
-
-#contact2 {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(/img/pexels-mikhail-nilov-8430275.jpg);
-    background-size: cover;
-    background-position: 90% 50%;
-} 
-
-
-#contact2 .drop-shadow {
-    height: 100%;
-    width: 100%;
-    filter:  drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.30));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    border: yellow 1px solid;
-}
-    
-
-#contact2 .glass {
-    height: 100%;
-    width: 100%;
-    background-image: url(/img/pexels-mikhail-nilov-8430275.jpg);
-    background-size: cover;
-    background-position: 100% 50%;
-    clip-path: inset(5em 22em 3em 22em);
-    filter: blur(20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-#contact2 .drop-shadow > .container2{
-    z-index: 5;
-    color: #050B13;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: calc(100% - 44em);
-    border: palevioletred 1px solid;
-}
-
-#contact2 h2{
-    font-size: 2.5em;
-    margin-bottom: 0.2em;
-    text-align: center;
-    color:#303134;
-    border: #050B13 1PX SOLID;
-}
-
-#contact2 .Sam{
-    font-size: 2em;
-    text-align: center;
-    padding: 1em;
-}
-
-#contact2 h3{
-    color:whitesmoke;
-}
-
-#contact2 .infosContact{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: #4185B5 1px solid;
-    padding: 1.5em 0;
-}
-
-#contact2 .container3{
-    padding: 0 2em;
-    font-size: 1.2em;
-    display: flex;
-    flex-direction: row;
-    font-size: 1.5em;
-}
-
-#contact2 i{
-    padding: 0 1em;
-}
-
-#contact2 button{
-    margin: 1em 0;
-    color: var(--backgroung-gris);
-    align-items: center;
-    justify-content: center;
-    padding: 0.5em;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    border: whitesmoke 2px solid;
-    color: whitesmoke;
-    background-color: inherit;
-}
-
-#contact2 button:hover{
-    background-color: whitesmoke;
-    color: #303134;
-    padding: 0.6em;
-    transition: 0.3s;
-}
-
-
-#contact2 .subInfos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 1.4em;
-}
-
-#contact2 .subInfo{
-    padding: 0.5em;
-    flex-basis: 50%;
-    text-align: center;
-}
-
-
-
-#contact2 .offices{
-    display: flex;
-    flex-direction: row;
-    padding: 1.5em;
-    width: 70%;
-
-}
-
-
-#contact2 .office {
-    border: red solid 1px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-basis: 50%;
-}
-
-#contact2 .titreOffice {
-    font-size: 1.7em;
-}
-
-#contact2 .textoffice1 {
-    font-style: italic;
-    padding: 0.5em;
-}
-
-#contact2 .adresse{
-    padding: 0.7em;
-}
-
-
 
 
 /********************/
@@ -1009,6 +782,34 @@ h1{
     color: rgb(192, 192, 192);
 }
 
+
+/**************************/
+/*** SECTION DISCLAIMER ***/
+/**************************/
+
+#disclaimer{
+    height: 100vh;
+    background: rgb(5,11,19);
+    background: linear-gradient(45deg, rgba(5,11,19,1) 0%, rgba(77,77,77,1) 49%, rgba(51,48,64,1) 100%);
+}
+
+#disclaimer .container{
+    padding-top: var(--heightNav);
+    width: 60vw;
+    height: 50vh;
+    padding-left: 4em;
+}
+
+#disclaimer h3{
+    text-transform: uppercase;
+    font-size: 2.5em;
+    padding: 0.5em 0.5em 0.5em 0 ;
+}
+
+#disclaimer p{
+    line-height: 1.5em;
+    font-size: 1em;
+}
 
 
 
@@ -1108,7 +909,10 @@ h1{
     }
 }
 
-
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
 
 
 
@@ -1146,7 +950,6 @@ h1{
 
 .space{
     height: 50px;
-    border: #4185B5 1px solid;
 }
 
 /********************/
@@ -1160,7 +963,6 @@ h1{
         position: fixed;
         display: flex;
         overflow-y: visible;
-        border-bottom: red solid 1px;
         z-index: 1;
         align-items: center;
         justify-content: flex-end;
@@ -1201,25 +1003,13 @@ h1{
     }
     
     .menu{
-        /* display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: center; */
         display:none;
         background-color: inherit;
         list-style-type: none;
-        text-align: inherit;
-
-        
+        text-align: inherit;    
     } 
     
-    /* nav ul{
-        display:none;
-        background-color: inherit;
-        list-style-type: none;
-        text-align: inherit;
-    } */
-    
+  
     
     nav input[type=checkbox]{
         display: none;
@@ -1263,12 +1053,9 @@ h1{
     animation: zoom-out-mobile 1.7s ease-in-out 1s forwards;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px red solid;
-
 }
 
 #home .nonMovingDiv-mobile{
-    border: solid purple 1px;
     display: block;
     position: relative;
     overflow: hidden;
@@ -1282,7 +1069,7 @@ h1{
     background-repeat: no-repeat;
     margin: 20px 0 ;
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     min-height: 80px;
     overflow: hidden;
     opacity: 0;
@@ -1294,16 +1081,12 @@ h1{
     display: flex;
     flex-direction: column;
     padding: 0px;
-    border: solid orange 1px;
-
 }
 
 .topText{
     overflow: hidden;
-    border: greenyellow solid 1px;
     padding: 0 0px;
 }
-
 
 
 h1{
@@ -1314,12 +1097,11 @@ h1{
     line-height: 1.25em;
     text-align: center;
     opacity:0;
+    padding: 0 1em;
     animation: showTopText 0.4s ease-in-out 2.1s forwards;
-
 }
 
 #home .discoverUs{
-    /* border: solid 1px whitesmoke; */
     text-align: center;
     align-self: center;
     padding: 0.6em;
@@ -1327,19 +1109,16 @@ h1{
     font-size: 1em;
     font-weight: 500;
     margin-top: 20px;
+    outline: 0px solid;
     visibility: hidden;
     opacity: 0;
     z-index: -1;
     animation: appear 1.1s linear 2.5s forwards;
+    pointer-events: none;
 }
 
-#home a{
-    text-decoration: none;
-}
 
-  
 .expand{
-    border: purple solid 1px;
     display: flex;
     justify-content: center;
 }
@@ -1355,7 +1134,7 @@ h1{
 /*** SECTION WHO WE ARE ***/
 /**************************/   
 
-.repère{
+.repere{
     width: 100%;
     height: 1px;
     position: relative;
@@ -1369,10 +1148,6 @@ h1{
     text-align: center;
     padding: 10px 9vw;
 }
-
-
-
-
 
 #whoWeAre-mobile .text-intro{
     padding: 10px 20px;
@@ -1404,7 +1179,6 @@ h1{
 
 #whoWeAre-mobile ul{
     line-height: 1.5em;
-    border: #4185B5 solid 1px;
 }
 
 #whoWeAre-mobile li{
@@ -1417,7 +1191,6 @@ h1{
     content: '⮚ ';
     font-size: 1em;
 }
-
 
 
 
@@ -1434,11 +1207,10 @@ h1{
 }
 
 #capabilities-mobile .helicopterMaquette-mobile{
-    background: url(img/img3-white.png);
+    background: url(img/img3.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border: palevioletred 1px solid;
     width: 100%;
     height: 50vw;
     margin: 5px 0 ;
@@ -1463,7 +1235,6 @@ h1{
     flex-wrap: wrap;
     text-align: left;
     padding-left: 0.8em;
-
 }
 
 
@@ -1494,20 +1265,10 @@ h1{
     max-height: 400px;
   }
   
-  /* .section-parallax::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(56, 36, 52, 0.5);
-  } */
-  
+ 
   .parallax-img {
     position: relative;
     height: 400px;
-
   }
 
 
@@ -1535,7 +1296,6 @@ h1{
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: yellow 1px solid;
     padding: 0.8em 0;
 }
 
@@ -1544,9 +1304,6 @@ h1{
     padding: 0.5em;
 }
 
-#contact-mobile .office{
-    border: #2F528F 1px solid;
-}
 
 #contact-mobile .titreOffice{
     font-size: 1.2em;
@@ -1555,7 +1312,8 @@ h1{
 
 #contact-mobile .textoffice1{
     font-style: italic;
-    padding: 0.9em 0;
+    padding: 0.9em 0.5em;
+    font-size: 1em;
 }
 
 #contact-mobile .adresse{
@@ -1575,6 +1333,7 @@ h1{
 #footer-mobile{
     position: absolute;
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: fit-content;
     background-color: var(--black-gradiant);
@@ -1591,9 +1350,51 @@ h1{
 }
 
 
+.popup {
+    position: relative;
+    /* display: inline-block; */
+    width: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: underline;
+}
 
+.popup .popuptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #414040;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 60%;
+    margin-left: -120px;
+  }
 
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #414040 transparent transparent transparent;
+  }
 
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    /* -webkit-animation: fadeIn 1s; */
+    animation: fadeIn 1s;
+  }
 
 
 /*******Animations **********/
@@ -1638,6 +1439,38 @@ h1{
     transform: translateX(0);
 }
 
+}
 
 
+/* ***************************************************************** */
+/************Styles specifiques pour les grands moniteurs *************/
+@media screen and (min-width: 1700px){
+    #whoWeAre .container1{ 
+        width: 68vw;
+        justify-content: space-around;
+    }
+    
+    #whoWeAre .container2{
+        flex-basis: 45%;
+    } 
+    
+    #whoWeAre .container3-1{
+        padding-right: 4.5em;
+    }
+    
+    #whoWeAre .container3-1 .p1{
+        font-size: 1.25em;
+    }
+
+    #whoWeAre .container3-1 .p2{
+        font-size: 1.25em;
+    }  
+
+    #whoWeAre .container3-1 .p3{
+        font-size: 1.25em;
+    }    
+
+    #whoWeAre h2{
+        font-size: 2.2em;
+    }
 }
